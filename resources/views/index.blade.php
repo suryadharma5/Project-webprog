@@ -4,8 +4,6 @@
 @endsection 
 @section('contents')
 <div class="full-width-content">
-   
-
     <div class="row">
         <div class="sectionpic awanatas">
             <img src="/img/awanputih.png" alt="">
@@ -722,7 +720,6 @@
         <div>
             <p> INI FOOTER NANTI </p>
         </div>
-    </footer>
-        
+    </footer> 
 </div>
 @endsection
