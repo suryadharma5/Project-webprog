@@ -29,7 +29,7 @@ class CityController extends Controller
         foreach($regencies as $regency){
             echo "<option value='$regency->id'> $regency->name </option>";
         }
-        
+
     }
 
     public function getHospital (Request $request){
@@ -80,7 +80,7 @@ class CityController extends Controller
             </div>
             </div>";
         }
-        
+
     }
 
     public function bookDoctor(Doctor $doctor){
@@ -88,4 +88,6 @@ class CityController extends Controller
             'active' => 'book'
         ]);
     }
+
+
 }

@@ -1,32 +1,31 @@
 @extends('layout.main')
 
-
 @section('css')
         <link rel="stylesheet" href="/css/book1.css">
         <link rel="stylesheet" href="/css/navbar.css">
 @endsection
-        
+
 @section('title')
 <title>Hamily | {{ $title }}</title>
 @endsection
-        
+
     @section('contents')
     <div class="container-fluid g-0 container-gb-book-dokter overflow-hidden" style="position: relative">
             <img src="/img/bg-book-dokter.png" alt="" style="z-index:1" class="bg-book-dokter img-fluid" width="100%">
             <div class="container-fluid g-0 container-text-info-bg" style="position: absolute; z-index: 2">
-                <div class="row"> 
+                <div class="row">
                     <div class="offset-5 col-3 d-flex justify-content-end">
                         <img src="/img/check-circle-rounded.svg" alt="" class="img-check-info">
                     </div>
                     <div class="col-4 text-info-bg d-flex align-items-center text-check-info" >Ribuan Dokter Berpengalaman</div>
                 </div>
-                <div class="row mt-3"> 
+                <div class="row mt-3">
                     <div class="offset-5 col-3 d-flex justify-content-end">
                         <img src="/img/check-circle-rounded.svg" alt="" class="img-check-info">
                     </div>
                     <div class="col-4 text-info-bg d-flex align-items-center text-check-info" >Dari Rumah Sakit Terbaik</div>
                 </div>
-                <div class="row mt-3"> 
+                <div class="row mt-3">
                     <div class="offset-5 col-3 d-flex justify-content-end">
                         <img src="/img/check-circle-rounded.svg" alt="" class="img-check-info">
                     </div>
@@ -39,7 +38,7 @@
     </div>
     <div class="mt-2">
             <div class="full-width-content">
-                
+
                 <div class="container">
                     <div class="dropdown-aja">
                         <select class="form-select daerah" aria-label="Default select example" id="provinsi">
@@ -64,7 +63,7 @@
                         ini untuk status book
                     </div> --}}
                 </div>
-        
+
                 <div class="contentbookingdokter" id="result">
                     <div class="row">
                         <div class="col-md-4 status-book">
@@ -103,7 +102,7 @@
                                     </div>
                                 </div>
                             </div>
-        
+
                             <div class="row box text-center">
                                 <div class="box-atas">
                                     <div class="date">
@@ -136,7 +135,7 @@
                                     </div>
                                 </div>
                             </div>
-        
+
                             <div class="row box text-center">
                                 <div class="box-atas">
                                     <div class="date">
@@ -169,7 +168,7 @@
                                     </div>
                                 </div>
                             </div>
-            
+
                         </div>
                         <!-- ----------------------------POP UP KONFIRMASI----------------------------------- -->
                         <div id="popup1" class="overlay">
@@ -191,9 +190,9 @@
                                             <button type="button" class="btn btn-primary cancel">Lanjut</button>
                                         </a>
                                     </div>
-                                    
+
                                 </div>
-                                
+
                             </div>
                         </div>
                         <!-- ----------------------------END POP UP KONFIRMASI----------------------------------- -->
@@ -216,7 +215,7 @@
                                 Pilih Dokter
                             </div>
                             <div class="col-lg-7 pilih-hari bg-primary">
-                                
+
                             </div>
                             <div class="row">
                                 <div class="dropdown-hari mt-2 col-lg-8">
@@ -235,13 +234,13 @@
                             </div>
                         </div>
                     </div>
-        
+
                 </div>
                 {{-- <div class="footer">INI FOOTER</div> --}}
-        
+
             </div>
     </div>
-        
+
     @endsection
 
 </html>
