@@ -93,3 +93,11 @@
     width: 390px;
     height: 210px;
 }
+
+.bg-transparent{
+    background-color: #78A2CC !important;
+}
+
+footer{
+    margin-top: 0px;
+}

@@ -66,3 +66,9 @@ Route::get('/via', function () {
         'active' => 'popular'
     ]);
 });
+
+Route::get('/drating', function(){
+    return view('rating.detailrating',[
+        'active' => 'drating'
+    ]);
+});
