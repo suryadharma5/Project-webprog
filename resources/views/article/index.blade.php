@@ -1,8 +1,8 @@
 @extends('layout.main')
 
 @section('css')
-    <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="/css/article.css">
+    {{-- <link rel="stylesheet" href="/css/navbar.css"> --}}
 @endsection
 
 @section('title')
@@ -97,19 +97,19 @@
     
         <ul class="nav nav-underline justify-content-center mt-3 align-items-center tabControl mt-5" id="myTab" role="tablist" style="background-color: #FFB8C7; border-radius:10px">
             <li class="nav-item">
-              <a class="nav-link active" href="#content1" id="tab1" data-bs-toggle="tab" href="#content1" role="tab" aria-controls="content1" aria-selected="true">Mom's Corner</a>
+              <a class="nav-link tab-aja active" href="#content1" id="tab1" data-bs-toggle="tab" href="#content1" role="tab" aria-controls="content1" aria-selected="true">Mom's Corner</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#content2" id="tab2" data-bs-toggle="tab" href="#content2" role="tab" aria-controls="content2" aria-selected="false">Dad's Corner</a>
+              <a class="nav-link tab-aja" href="#content2" id="tab2" data-bs-toggle="tab" href="#content2" role="tab" aria-controls="content2" aria-selected="false">Dad's Corner</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#content3" id="tab3" data-bs-toggle="tab" href="#content3" role="tab" aria-controls="content3" aria-selected="false">Mom & Dad's Corner</a>
+              <a class="nav-link tab-aja" href="#content3" id="tab3" data-bs-toggle="tab" href="#content3" role="tab" aria-controls="content3" aria-selected="false">Mom & Dad's Corner</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#content4" id="tab4" data-bs-toggle="tab" href="#content4" role="tab" aria-controls="content4" aria-selected="false">Family's Corner</a>
+              <a class="nav-link tab-aja" href="#content4" id="tab4" data-bs-toggle="tab" href="#content4" role="tab" aria-controls="content4" aria-selected="false">Family's Corner</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#content5" id="tab5" data-bs-toggle="tab" href="#content5" role="tab" aria-controls="content5" aria-selected="false">Everyone's Corner</a>
+              <a class="nav-link tab-aja" href="#content5" id="tab5" data-bs-toggle="tab" href="#content5" role="tab" aria-controls="content5" aria-selected="false">Everyone's Corner</a>
             </li>
         </ul>
 

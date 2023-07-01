@@ -5,7 +5,8 @@
     color: black;
 }
 
-.nav-link.active{
+.tab-aja.active{
+    margin: 0;
     color: #78A2CC !important;
 }
 
@@ -16,7 +17,12 @@
 
 .title{
     font-weight: bold;
-    font-size:30px;
+    font-size: 30px;
+}
+
+.tab-aja{
+    text-decoration: none;
+    color: white !important;
 }
 
 /* .nav-underline > li.nav-item > .active > a {
