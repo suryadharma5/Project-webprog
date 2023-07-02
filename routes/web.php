@@ -75,6 +75,19 @@ Route::post('/admin/article/post', [ArticleAdminController::class, 'crudproses']
 Route::get('/admin/menfess',  [MenfessAdminController::class, 'index']);
 Route::delete('/admin/menfess/{id}',  [MenfessAdminController::class, 'destroy'])->name('delete-menfess');
 
+Route::get('/hpl', function() {
+    return view('tracking-calendar.hpl', [
+        'title' => 'hpl',
+        'active' => 'tracking'
+    ]);
+});
+Route::get('/hpht', function() {
+    return view('tracking-calendar.hpht', [
+        'title' => 'hpht',
+        'active' => 'tracking'
+    ]);
+});
+
 // Route::get('/drating', function(){
 //     return view('rating.detailrating',[
 //         'active' => 'drating'
