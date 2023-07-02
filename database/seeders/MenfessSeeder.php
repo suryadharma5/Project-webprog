@@ -29,7 +29,7 @@ class MenfessSeeder extends Seeder
         ]);
 
         DB::table('menfesses')->insert([
-            'user_id' => '2',
+            'user_id' => '1',
             'title' => 'Bagaimana cara memiliki anak kembar? Apakah harus keturunan?',
             'total_likes' => $faker->numberBetween(0, 100),
             'total_replies' => $faker->numberBetween(0, 10),
@@ -38,7 +38,7 @@ class MenfessSeeder extends Seeder
         ]);
 
         DB::table('menfesses')->insert([
-            'user_id' => '3',
+            'user_id' => '1',
             'title' => 'Apakah ibu hamil boleh tetap aktif bekerja?',
             'total_likes' => $faker->numberBetween(0, 100),
             'total_replies' => $faker->numberBetween(0, 10),

@@ -39,3 +39,8 @@
 .nav-tabs .nav-item .nav-link.active {
     border-color: #000; Customize the color of the underline
 } */
+
+.nav-link{
+    text-decoration: none;
+    color: white !important;
+}
