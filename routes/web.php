@@ -8,6 +8,8 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\MenfessController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ArticleAdminController;
+use App\Http\Controllers\MenfessAdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,8 +62,21 @@ Route::fallback(function () {
     ]);
 });
 
-Route::get('/drating', function(){
-    return view('rating.detailrating',[
-        'active' => 'drating'
+Route::get('/admin/article', function() {
+    return view('admin.articleHome', [
+        'title' => 'articleAdmin',
+        'active' => 'article'
     ]);
 });
+
+Route::get('/admin/article/post', [ArticleAdminController::class, 'crud']); 
+Route::post('/admin/article/post', [ArticleAdminController::class, 'crudproses'])->name('crudproses');
+
+Route::get('/admin/menfess',  [MenfessAdminController::class, 'index']);
+Route::delete('/admin/menfess/{id}',  [MenfessAdminController::class, 'destroy'])->name('delete-menfess');
+
+// Route::get('/drating', function(){
+//     return view('rating.detailrating',[
+//         'active' => 'drating'
+//     ]);
+// });

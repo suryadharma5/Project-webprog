@@ -46,7 +46,7 @@
     
     {{-- <div style="height: 500px"></div> --}}
     @stack('css-footer')
-    @include('partials.footer')
+    {{-- @include('partials.footer') --}}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -2,7 +2,6 @@
 
 @section('css')
     <link rel="stylesheet" href="/css/article.css">
-    {{-- <link rel="stylesheet" href="/css/navbar.css"> --}}
 @endsection
 
 @section('title')
@@ -29,6 +28,13 @@
                     </button>
                 </div>
             </form>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center">
+                <a href="/admin/article/post">
+                    <div class="tombol">
+                        <button type="button" class="btn" style="width:100%; background-color: #FFB8C7; font-weight: bold; margin-right: 25px; color:#FFF7F6"><i class="fa-solid fa-cloud-arrow-up fa-xl"></i>   Post Article</button>
+                    </div>
+                </a>
             </div>
         </div>
     
@@ -116,83 +122,96 @@
 
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="content1" role="tabpanel" aria-labelledby="tab1">
-                <!-- Content for Tab 1 -->
                 @for ($i = 0; $i < 3; $i++)
-                    <a href="" class="row mt-5 box-article-tab">
-                        <div class="col-6 g-0">
+                    <div class="row mt-5 box-article-tab">
+                        <div class="col-6 g-0" >
                             <img src="/img/gb-artikel-tab.png" alt="" href="#" style="border-radius: 10px 0px 0px 10px;">
                         </div>
-                        <div class="col-4 mt-5">
+                        <a href="" class="col-4 mt-5" style="text-decoration: none; color:black">
                             <div class="title">Ibu, Jaga Buah Hati Dengan Makanan Ini</div>
                             <div class="date-posted">Posted on Wed, April 4th 2023</div>
-                        </div>
-                        <div class="col">
-                        </div>
-                    </a>
+                        </a>
+                        <a href="#" class="col-2 d-flex align-items-end justify-content-center mb-4" style="text-decoration: none; color:darkred">
+                            <div>
+                                <i class="fa-solid fa-trash" style="margin-right: 5px"></i>Delete
+                            </div>   
+                        </a>
+                    </div>
                 @endfor
             </div>
             <div class="tab-pane fade" id="content2" role="tabpanel" aria-labelledby="tab2">
-                <!-- Content for Tab 2 -->
                 @for ($i = 0; $i < 3; $i++)
-                    <a href="" class="row mt-5 box-article-tab">
-                        <div class="col-6 g-0">
+                    <div class="row mt-5 box-article-tab">
+                        <div class="col-6 g-0" >
                             <img src="/img/gb-artikel-tab.png" alt="" href="#" style="border-radius: 10px 0px 0px 10px;">
                         </div>
-                        <div class="col-4 mt-5">
-                            <div class="title">Ibu, Jaga Buah Hati Dengan Makanan Ini 2</div>
+                        <a href="" class="col-4 mt-5" style="text-decoration: none; color:black">
+                            <div class="title">Ibu, Jaga Buah Hati Dengan Makanan Ini</div>
                             <div class="date-posted">Posted on Wed, April 4th 2023</div>
-                        </div>
-                        <div class="col">
-                        </div>
-                    </a>
+                        </a>
+                        <a href="#" class="col-2 d-flex align-items-end justify-content-center mb-4" style="text-decoration: none; color:darkred">
+                            <div>
+                                <i class="fa-solid fa-trash" style="margin-right: 5px"></i>Delete
+                            </div>   
+                        </a>
+                    </div>
                 @endfor
             </div>
             <div class="tab-pane fade" id="content3" role="tabpanel" aria-labelledby="tab3">
                 <!-- Content for Tab 3 -->
                 @for ($i = 0; $i < 3; $i++)
-                    <a href="" class="row mt-5 box-article-tab">
-                        <div class="col-6 g-0">
-                            <img src="/img/gb-artikel-tab.png" alt="" href="#" style="border-radius: 10px 0px 0px 10px;">
-                        </div>
-                        <div class="col-4 mt-5">
-                            <div class="title">Ibu, Jaga Buah Hati Dengan Makanan Ini 3</div>
-                            <div class="date-posted">Posted on Wed, April 4th 2023</div>
-                        </div>
-                        <div class="col">
-                        </div>
+                <div class="row mt-5 box-article-tab">
+                    <div class="col-6 g-0" >
+                        <img src="/img/gb-artikel-tab.png" alt="" href="#" style="border-radius: 10px 0px 0px 10px;">
+                    </div>
+                    <a href="" class="col-4 mt-5" style="text-decoration: none; color:black">
+                        <div class="title">Ibu, Jaga Buah Hati Dengan Makanan Ini</div>
+                        <div class="date-posted">Posted on Wed, April 4th 2023</div>
                     </a>
+                    <a href="#" class="col-2 d-flex align-items-end justify-content-center mb-4" style="text-decoration: none; color:darkred">
+                        <div>
+                            <i class="fa-solid fa-trash" style="margin-right: 5px"></i>Delete
+                        </div>   
+                    </a>
+                </div>
                 @endfor
             </div>
             <div class="tab-pane fade" id="content4" role="tabpanel" aria-labelledby="tab4">
                 <!-- Content for Tab 3 -->
                 @for ($i = 0; $i < 3; $i++)
-                    <a href="" class="row mt-5 box-article-tab">
-                        <div class="col-6 g-0">
+                    <div class="row mt-5 box-article-tab">
+                        <div class="col-6 g-0" >
                             <img src="/img/gb-artikel-tab.png" alt="" href="#" style="border-radius: 10px 0px 0px 10px;">
                         </div>
-                        <div class="col-4 mt-5">
-                            <div class="title">Ibu, Jaga Buah Hati Dengan Makanan Ini 4</div>
+                        <a href="" class="col-4 mt-5" style="text-decoration: none; color:black">
+                            <div class="title">Ibu, Jaga Buah Hati Dengan Makanan Ini</div>
                             <div class="date-posted">Posted on Wed, April 4th 2023</div>
-                        </div>
-                        <div class="col">
-                        </div>
-                    </a>
+                        </a>
+                        <a href="#" class="col-2 d-flex align-items-end justify-content-center mb-4" style="text-decoration: none; color:darkred">
+                            <div>
+                                <i class="fa-solid fa-trash" style="margin-right: 5px"></i>Delete
+                            </div>   
+                        </a>
+                    </div>
                 @endfor
             </div>
             <div class="tab-pane fade" id="content5" role="tabpanel" aria-labelledby="tab5">
                 <!-- Content for Tab 3 -->
                 @for ($i = 0; $i < 3; $i++)
-                    <a href="" class="row mt-5 box-article-tab">
-                        <div class="col-6 g-0">
+                    <div class="row mt-5 box-article-tab">
+                        <div class="col-6 g-0" >
                             <img src="/img/gb-artikel-tab.png" alt="" href="#" style="border-radius: 10px 0px 0px 10px;">
                         </div>
-                        <div class="col-4 mt-5">
-                            <div class="title">Ibu, Jaga Buah Hati Dengan Makanan Ini 5</div>
+                        <a href="" class="col-4 mt-5" style="text-decoration: none; color:black">
+                            <div class="title">Ibu, Jaga Buah Hati Dengan Makanan Ini</div>
                             <div class="date-posted">Posted on Wed, April 4th 2023</div>
-                        </div>
-                        <div class="col">
-                        </div>
-                    </a>
+                        </a>
+                        <a href="#" class="col-2 d-flex align-items-end justify-content-center mb-4" style="text-decoration: none; color:darkred">
+                            <div>
+                                <i class="fa-solid fa-trash" style="margin-right: 5px"></i>Delete
+                            </div>   
+                        </a>
+                    </div>
                 @endfor
             </div>
         </div>
