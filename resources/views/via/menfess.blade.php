@@ -1,12 +1,13 @@
 @extends('layout.main')
 
+@section('title')
+<title>Hamily | {{ $title }}</title>
+@endsection
+
 @section('css')
         <link rel="stylesheet" href="/css/menfess.css">
 @endsection
 
-@section('title')
-<title>Hamily | {{ $title }}</title>
-@endsection
 
 
 @section('contents')
@@ -14,10 +15,17 @@
 <div class="container">
     {{-- button bagian atas --}}
     <div class="row pt-5 d-flex">
-        <div class="col-4">
+        <div class="col-2">
             <a href="#">
                 <div class="tombol">
                     <button type="button" class="btn" style="background-color: #FFB8C7; font-weight: bold; margin-right: 25px; color:#FFF7F6"><i class="fa-solid fa-cloud-arrow-up fa-xl"></i>post menfess</button>
+                </div>
+            </a>
+        </div>
+        <div class="col-2">
+            <a href="#">
+                <div class="tombol">
+                    <button type="button" class="btn" style="background-color: #78A2CC; font-weight: bold; color:#FFF7F6"><i class="fa-solid fa-clock-rotate-left fa-xl"></i>my menfess</button>
                 </div>
             </a>
         </div>
@@ -32,34 +40,29 @@
             </div>
         </div>
     </div>
-
-    {{-- card untuk menfess --}}
-    @foreach ($menfess as $men)
     <div class="card my-3" >
         <div class="card-body">
             <div class="row d-flex mx-1">
-                <div class="col-9 my-1">
-                    <a href="/detailMenfess" class="text-decoration-none text-black">
-                        <h3 class="card-title fw-bold">{{ $men->title }}</h3>
-                    </a>
+                <div class="col-10 my-1">
+                    <h3 class="card-title fw-bold">ini judul</h3>
                 </div>
-                <div class="col my-1 d-flex justify-content-center">
+                <div class="col my-1">
                     <div class="row d-flex">
                         <div class="col-1">
                             <i class="fa-solid fa-heart fa-lg" style="color: #78a2cc;"></i>
                         </div>
                         <div class="col">
-                            <p style="color: #78A2CC">{{ $men->total_likes }} likes</p>
+                            <p style="color: #78A2CC">100 likes</p>
                         </div>
                     </div>
                 </div>
                 <div class="col my-1" style="margin-left: -25px;">
-                    <div class="row">
+                    <div class="row d-flex">
                         <div class="col-1">
                             <i class="fa-solid fa-message" style="color: #78a2cc;"></i>
                         </div>
                         <div class="col">
-                            <p style="color: #78A2CC">{{ $men->total_replies }} replies</p>
+                            <p style="color: #78A2CC">5 replies</p>
                         </div>
                     </div>
                 </div>
@@ -68,7 +71,7 @@
                 <div class="col-1">
                     <p class="card-text" style="color: gray">asked by</p>
                 </div>
-                <div class="col" style="margin-left: -25px">
+                <div class="col" style="margin-left: -38px">
                     <p class="card-text" style="font-weight: bold;">suryadharma</p>
                 </div>
             </div>
@@ -82,31 +85,18 @@
                 </div>
             </div>
             <div class="row mx-1">
-                <img src="{{ $men->menfess_image }}" class="card-img-top" alt="..." style="height: 380px; object-fit:cover;">
+                <img src="/img/articlepic.jpg" class="card-img-top" alt="..." style="height: 380px; object-fit:cover;">
             </div>
             <div class="row m-1">
-                <p>{{$men->menfess_text}}</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
             <div class="row text-center" style="margin-left: 30%; margin-right:30%;">
-                <div class="col-6 tombol">
+                <div class="tombol">
                     <a href="#" class="btn" style="background-color: #78A2CC; color:#FFF7F6;">See more replies  <i class="fa-solid fa-arrow-right fa-lg mx-2" style="color: #ffffff;"></i></a>
                 </div>
-                <div class="col-3" >
-                    <form action={{ route('delete-menfess', $men->id) }} method="POST" >
-                        @csrf
-                        @method('DELETE')
-                        <button class="btn" type="submit" style="border: none; background-color:#FFB8C7; color:white; height:38px"><i class="fa-solid fa-trash" style="margin-right: 5px"></i>Delete</button>
-                    </form>
-                </div>
-                {{-- <a href="#" class="col-3 d-flex align-items-center justify-content-center mb-4" style="text-decoration: none; color:darkred">
-                    <div>
-                        <i class="fa-solid fa-trash" style="margin-right: 5px"></i>Delete
-                    </div>   
-                </a> --}}
             </div>
         </div>
     </div>
-    @endforeach
 
 
 </div>

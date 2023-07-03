@@ -15,12 +15,4 @@ class MenfessController extends Controller
             'menfess' => Menfess::all()
         ]);
     }
-
-    public function detail(Menfess $menfess){
-        return view('menfess.menfess-detail', [
-            'title' => 'Menfess',
-            'active' => 'menfess',
-            'menfess' => $menfess
-        ]);
-    }
 }

@@ -6,24 +6,17 @@ use Illuminate\Http\Request;
 
 class RatingController extends Controller
 {
-    public function index(){
+    public function index (){
         return view('ratingNreview.index', [
-            'title' => 'Rating n Review',
-            'active' => 'rating',
-        ]);
+            'title' => 'Rating and review',
+            'active' => 'rating'
+        ]); 
     }
 
-    public function detailRating(){
-        return view('ratingNreview.detailrating', [
-            'title' => 'Rating n Review',
-            'active' => 'rating',
-        ]);
-    }
-
-    public function formRating(){
+    public function coba (){
         return view('ratingNreview.indexes', [
-            'title' => 'Rating n Review',
-            'active' => 'rating',
-        ]);
+            'title' => 'Rating and review',
+            'active' => 'rating'
+        ]); 
     }
 }
