@@ -61,3 +61,17 @@ Route::get('/via', function () {
         'active' => 'popular'
     ]);
 });
+
+Route::get('/viam', function () {
+    return view('via.menfess', [
+        'title' => 'Menfess',
+        'active' => 'menfess'
+    ]);
+});
+
+Route::get('/viarep', function () {
+    return view('via.replies', [
+        'title' => 'Menfess',
+        'active' => 'replies'
+    ]);
+});

@@ -21,8 +21,8 @@ return new class extends Migration
             // $table->foreignId('user_id');
             // $table->foreignId('user_image');
             // $table->foreignId('user_name');
-            // $table->foreignId('user_recommend');
-            // $table->foreignId('user_reviews');
+            $table->string('user_recommend');
+            $table->string('user_reviews');
             $table->timestamps();
         });
     }
