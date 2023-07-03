@@ -316,8 +316,8 @@
         
     </div>
 
-    <label for=""></label>
-    <input type="text" class="form-control">
+    @include('partials.footer')
+
 
     <script type="text/javascript">
         $(function() {

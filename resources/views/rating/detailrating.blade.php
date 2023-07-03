@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('title')
-    <title>Hamily | {{ $title }}</title>
+    {{-- <title>Hamily | {{ $title }}</title> --}}
 @endsection
 
 @section('contents')
@@ -106,11 +106,11 @@
 </div>
     
     <div class="sectionpic awanbiru">
-        <img src="img/awan.png" alt="">
+        <img src="img/awan-detailrating.png" alt="" style="width: 100%">
     </div>
 
-    <div class="container-fluid biru-bawah">
-        <div class="container ">
+    <div class="container-fluid biru-bawah pt-5 pb-5" style="margin-top: -120px">
+        <div class="container pt-5">
             <div class="container">
                 <div class="row pt-3">
                     <div class="col-3"></div>

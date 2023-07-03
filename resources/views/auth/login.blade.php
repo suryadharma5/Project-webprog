@@ -21,9 +21,9 @@
   <link rel="stylesheet" href="/css/navbar.css">
 @endsection
 
-@section('title')
+{{-- @section('title')
 <title>Hamily | {{ $title }}</title>
-@endsection
+@endsection --}}
 
 
 @section('contents')
