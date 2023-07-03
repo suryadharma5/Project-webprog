@@ -21,8 +21,11 @@ return new class extends Migration
             // $table->string('image')->nullable();
             // $table->text('excerp');
             $table->text('body');
+            $table->string('imageUrl');
             $table->timestamp('published_at')->nullable();
             $table->timestamps();
+
+            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 

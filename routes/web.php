@@ -1,15 +1,15 @@
 <?php
 
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\CityController;
-use App\Http\Controllers\RatingController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-// use App\Http\Controllers\CityController;
 use App\Http\Controllers\LoginController;
-// use App\Http\Controllers\RatingController;
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RatingController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\MenfessController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ArticleAdminController;
+use App\Http\Controllers\MenfessAdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,40 +29,67 @@ Route::get('/', function () {
     ]);
 });
 
-// Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
-// Route::post('/login', [LoginController::class, 'authenticate']);
-// Route::get('/logout', [LoginController::class, 'logout']);
-
-// Route::get('/register', [RegisterController::class, 'index']);
-// Route::post('/register', [RegisterController::class, 'store']);
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//404 handler
-Route::fallback(function () {
-    return view('404');
-});
 
 Route::get('/article', [ArticleController::class, 'index']);
+Route::get('/detailArticle', [ArticleController::class, 'detail']);
 
-Route::get('/book', [CityController::class, 'index']);
-Route::post('/getKabupaten', [CityController::class, 'getKabupaten']);
-
-Route::post('/getHospital', [CityController::class, 'getHospital']);
+Route::get('/book', [BookingController::class, 'index']);
+Route::post('/getKabupaten', [BookingController::class, 'getKabupaten']);
+Route::post('/getHospital', [BookingController::class, 'getHospital']);
+Route::post('/getDoctor', [BookingController::class, 'getDoctor']);
+Route::get('/book/{doctor:doctor_name}', [BookingController::class, 'bookDoctor']);
 
 Route::get('/rating', [RatingController::class, 'index']);
+Route::get('/addproduct', [RatingController::class, 'formRating']);
+Route::get('/detailRating', [RatingController::class, 'detailRating']);
+
+Route::get('/menfess', [MenfessController::class, 'index']);
+Route::get('/detailMenfess', [MenfessController::class, 'detail']);
 
 Route::get('/profile', function(){
     return view('profile.profile');
 });
 
-Route::put('/profile', [ProfileController::class, 'updateprofile'])->name('updateprofile');
 
-Route::get('/via', function () {
-    return view('via.popular', [
-        'title' => 'Rating',
-        'active' => 'popular'
+//404 handler
+Route::fallback(function () {
+    return view('404', [
+        'active' => 'none'
     ]);
 });
+
+Route::get('/admin/article', function() {
+    return view('admin.articleHome', [
+        'title' => 'articleAdmin',
+        'active' => 'article'
+    ]);
+});
+
+Route::get('/admin/article/post', [ArticleAdminController::class, 'crud']); 
+Route::post('/admin/article/post', [ArticleAdminController::class, 'crudproses'])->name('crudproses');
+
+Route::get('/admin/menfess',  [MenfessAdminController::class, 'index']);
+Route::delete('/admin/menfess/{id}',  [MenfessAdminController::class, 'destroy'])->name('delete-menfess');
+
+Route::get('/hpl', function() {
+    return view('tracking-calendar.hpl', [
+        'title' => 'hpl',
+        'active' => 'tracking'
+    ]);
+});
+Route::get('/hpht', function() {
+    return view('tracking-calendar.hpht', [
+        'title' => 'hpht',
+        'active' => 'tracking'
+    ]);
+});
+
+// Route::get('/drating', function(){
+//     return view('rating.detailrating',[
+//         'active' => 'drating'
+//     ]);
+// });

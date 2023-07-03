@@ -6,21 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
+    {{-- Trix Editor --}}
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>
+
     @stack('before-style')
     <!-- Bootstrap CSS -->
     {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
     {{-- linke ke icon bootstrap --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
     {{-- css kita --}}
     <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/detailrating.css">
     @yield('css')
-    {{-- <link rel="stylesheet" href="/css/style.css"> --}}
-    {{-- <link rel="stylesheet" href="/css/home1.css"> --}}
-    {{-- <link rel="stylesheet" href="/css/book1.css"> --}}
 
 
     <link href="css/bootstrap.css" rel="stylesheet">   
@@ -32,6 +34,7 @@
     @yield('title')
   </head>
   <body>
+    @stack('backgorund-color')
     {{-- ini berarti ngambil dari folder partials dengan nama file Navbar --}}
     @include('partials.navbar')
     
@@ -43,7 +46,7 @@
     
     {{-- <div style="height: 500px"></div> --}}
     @stack('css-footer')
-    @include('partials.footer')
+    {{-- @include('partials.footer') --}}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
