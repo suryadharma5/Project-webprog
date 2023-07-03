@@ -1,3 +1,7 @@
+*{
+    font-family: 'Baloo 2', cursive;
+}
+
 .box-article-tab{
     border-radius: 10px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
@@ -8,6 +12,7 @@
 .tab-aja.active{
     margin: 0;
     color: #78A2CC !important;
+    font-weight: bold;
 }
 
 .nav-link:hover{
@@ -23,6 +28,7 @@
 .tab-aja{
     text-decoration: none;
     color: white !important;
+    font-weight: bold;
 }
 
 /* .nav-underline > li.nav-item > .active > a {

@@ -33,7 +33,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
 Route::get('/article', [ArticleController::class, 'index']);
 Route::get('/detailArticle', [ArticleController::class, 'detail']);
 
@@ -42,16 +41,19 @@ Route::post('/getKabupaten', [BookingController::class, 'getKabupaten']);
 Route::post('/getHospital', [BookingController::class, 'getHospital']);
 Route::post('/getDoctor', [BookingController::class, 'getDoctor']);
 Route::get('/book/{doctor:doctor_name}', [BookingController::class, 'bookDoctor']);
+Route::get('/coba', [BookingController::class, 'formBooking']);
 
 Route::get('/rating', [RatingController::class, 'index']);
-Route::get('/addproduct', [RatingController::class, 'formRating']);
-Route::get('/detailRating', [RatingController::class, 'detailRating']);
+Route::get('/rating/form', [RatingController::class, 'formRating']);
+Route::get('/rating/detail', [RatingController::class, 'detailRating']);
 
 Route::get('/menfess', [MenfessController::class, 'index']);
-Route::get('/detailMenfess', [MenfessController::class, 'detail']);
+Route::get('/menfess/detail/{menfess}', [MenfessController::class, 'detail']);
 
 Route::get('/profile', function(){
-    return view('profile.profile');
+    return view('profile.profile', [
+        'active' => 'profile'
+    ]);
 });
 
 
